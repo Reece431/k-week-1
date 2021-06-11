@@ -36,6 +36,9 @@ $btn2: #fbb03b;
 body{
     display:grid;
 }
+.y{
+    color: $btn2;
+}
 
 header {
     display:grid;
@@ -56,6 +59,7 @@ header {
         }
         .btns{
             justify-self: end;
+            padding-right: 2em;
             button{
                 cursor: pointer;
                 @include btn($btn1);
@@ -72,6 +76,8 @@ header {
     }
     nav{
         padding: 0.8em;
+        display:flex;
+        justify-content: center;
         background: $navCol;
         ul{
             list-style-type: none;
@@ -102,6 +108,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    background-color: #696969;//test
 
     .overlay{
         position: absolute;
@@ -133,15 +140,30 @@ header {
         z-index: 2;
 
         .offer{
-            font-size: 3em;
             padding: 1em 1.5em;
             text-align: center;
             border: solid 4px $col1;
             @include mqMax(500px){
-                font-size: 2em;
                 padding: .5em .75em;
                 margin-bottom: 1em;
             }
+            img{
+                width: 80%;
+            }
+        }
+        .offerSub{
+            width: 10em;
+            img{
+                width: 100%;
+            }
+
+        }
+        .offerTerms{
+            text-align: center;
+            font-size: .6em;
+            font-weight: normal;
+            width: 60%;
+            margin: .4em 0;
         }
         .offerBtn{
             @include btn($btn1);
@@ -180,6 +202,7 @@ header {
                        margin-bottom: 0.2em;
                    }
                    .badgeSub{
+                       font-size: .8em;
                        font-weight: 600;
                    }
                }
@@ -285,14 +308,21 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1.5em 0;
+            padding: 1em 0;
+            @include mqMax(590px){
+                justify-content: end;
+                .fa-walking{
+                    font-size: 3.9em;
+                }
+            }
             i{
                 font-size: 3em;
                 padding-right: 1em;
             }
             .txtWrap{
                 .badgeHead{
-                    font-size: 2em;
+                    font-size: 1.5em;
+                    font-weight: lighter;
                 }
                 .badgeSub{
                     font-weight: 600;
@@ -319,9 +349,6 @@ footer{
         padding: 1em;
         color: $navCol;
         background: #fff;
-        .y{
-            color: $btn2;
-        }
         @include mqMax(1181px){
             width: 90vw;
         }

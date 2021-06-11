@@ -12,6 +12,10 @@ body {
   display: grid;
 }
 
+.y {
+  color: #fbb03b;
+}
+
 header {
   display: -ms-grid;
   display: grid;
@@ -43,6 +47,7 @@ header .topBar .logo {
 header .topBar .btns {
   -ms-grid-column-align: end;
       justify-self: end;
+  padding-right: 2em;
 }
 
 header .topBar .btns button {
@@ -76,6 +81,12 @@ header .topBar .btns button:nth-of-type(even) {
 
 header nav {
   padding: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #2D2D2D;
 }
 
@@ -115,6 +126,7 @@ header nav ul li {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-color: #696969;
 }
 
 .banner .overlay {
@@ -151,7 +163,6 @@ header nav ul li {
 }
 
 .banner .offerWrapper .offer {
-  font-size: 3em;
   padding: 1em 1.5em;
   text-align: center;
   border: solid 4px #fff;
@@ -159,10 +170,29 @@ header nav ul li {
 
 @media only screen and (max-width: 500px) {
   .banner .offerWrapper .offer {
-    font-size: 2em;
     padding: .5em .75em;
     margin-bottom: 1em;
   }
+}
+
+.banner .offerWrapper .offer img {
+  width: 80%;
+}
+
+.banner .offerWrapper .offerSub {
+  width: 10em;
+}
+
+.banner .offerWrapper .offerSub img {
+  width: 100%;
+}
+
+.banner .offerWrapper .offerTerms {
+  text-align: center;
+  font-size: .6em;
+  font-weight: normal;
+  width: 60%;
+  margin: .4em 0;
 }
 
 .banner .offerWrapper .offerBtn {
@@ -229,6 +259,7 @@ header nav ul li {
 }
 
 .banner .offerWrapper .badges .badge .txtWrap .badgeSub {
+  font-size: .8em;
   font-weight: 600;
 }
 
@@ -369,7 +400,18 @@ header nav ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.5em 0;
+  padding: 1em 0;
+}
+
+@media only screen and (max-width: 590px) {
+  .games .badges-2 .badge {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .games .badges-2 .badge .fa-walking {
+    font-size: 3.9em;
+  }
 }
 
 .games .badges-2 .badge i {
@@ -378,7 +420,8 @@ header nav ul li {
 }
 
 .games .badges-2 .badge .txtWrap .badgeHead {
-  font-size: 2em;
+  font-size: 1.5em;
+  font-weight: lighter;
 }
 
 .games .badges-2 .badge .txtWrap .badgeSub {
@@ -408,10 +451,6 @@ footer .copyright {
   padding: 1em;
   color: #2D2D2D;
   background: #fff;
-}
-
-footer .copyright .y {
-  color: #fbb03b;
 }
 
 @media only screen and (max-width: 1181px) {
