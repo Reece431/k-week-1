@@ -36,6 +36,12 @@ $btn2: #fbb03b;
 body{
     display:grid;
 }
+button{
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+}
 .y{
     color: $btn2;
 }

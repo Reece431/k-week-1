@@ -12,8 +12,12 @@ slider.addEventListener('mousedown', (e) => {
   scrollLeft = slider.scrollLeft;
   slider.classList.remove('scrolling');
 });
-slider.addEventListener('mouseup', () => {
+slider.addEventListener('mouseup', (e) => {
     isDown = false;
+    pos = e.pageX - slider.offsetLeft;
+    if(pos == startX){
+      window.location.href="https://www.kingcasino.com/?PAR=321ga64cidpidaffid55&NeoDL=registration";
+    }
 })
 slider.addEventListener('mouseleave', () =>{
     isDown = false;

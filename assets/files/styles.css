@@ -12,6 +12,11 @@ body {
   display: grid;
 }
 
+button a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .y {
   color: #fbb03b;
 }
