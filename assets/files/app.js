@@ -6,6 +6,18 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+const cidLinks = document.querySelectorAll('.cid');
+//edit to update the cid
+const cid = 'https://www.kingcasino.com/?PAR=321ga64cidLPTest1-OnlineSlots&NeoDL=registration'
+//set all cid links
+cidLinks.forEach(x => {
+  x.href = cid;
+})
+/*-------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------*/
+
 slider.addEventListener('mousedown', (e) => {
   isDown = true;
   startX = e.pageX - slider.offsetLeft;
@@ -16,7 +28,7 @@ slider.addEventListener('mouseup', (e) => {
     isDown = false;
     pos = e.pageX - slider.offsetLeft;
     if(pos == startX){
-      window.location.href="https://www.kingcasino.com/?PAR=321ga64cidpidaffid55&NeoDL=registration";
+      window.location.href= cid;
     }
 })
 slider.addEventListener('mouseleave', () =>{
